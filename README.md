@@ -1,6 +1,8 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
+![alt text](./demo.png)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
