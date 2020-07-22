@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: #aaa;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-label {
+  padding: 8px;
+}
+
+.input-widget {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: #ccc;
+  font-size: 0.8em;
+  padding: 5px 5px;
+  border-radius: 10px;
+  border: #eee 2px solid;
+  text-align: center;
+  color: #444;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.chart-pane {
+  width: 80%;
+  margin: 0 auto;
+}
