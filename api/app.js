@@ -1,5 +1,6 @@
 // Imports
 const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
 const { body, validationResult, checkSchema } = require("express-validator");
 
@@ -12,6 +13,12 @@ const app = express();
 
 // Middlewares
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "..", "client", "build")));
+
+// Endpoints
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
+});
 
 app.post(
   "/api",
@@ -38,17 +45,3 @@ app.post(
 );
 
 app.listen(port, () => console.log(`Server is running on localhost:${port}`));
-
-// app.post(
-//   "/user",
-//   body("email").custom(value => {
-//     return User.findUserByEmail(value).then(user => {
-//       if (user) {
-//         return Promise.reject("E-mail already in use");
-//       }
-//     });
-//   }),
-//   (req, res) => {
-//     // Handle the request
-//   },
-// );
